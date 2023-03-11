@@ -1,0 +1,21 @@
+.main-header {
+    @include flexy(flex, row, space-between, center);
+}
+
+.main-header h2 {
+    padding: 20px;
+    background-color: $color-white;
+    flex: 25%;
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+.tab {
+    flex: 75%;
+    background-color: darken($light-grey, 5%);
+    height: 59px;
+    border-left: 2px solid darken($light-grey, 10%);
+    border-bottom: 2px solid darken($light-grey, 10%);
+}
+

@@ -1,7 +1,11 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/****** Colors ******/ /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+* {
+  box-sizing: border-box;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,6 +54,111 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.image-header {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+header {
+  height: 80px;
+  background-color: rgb(97, 97, 177);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+.header-right, .header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right * {
+  margin-right: 5px;
+  margin-left: 5px;
+  text-align: right;
+}
+
+.header-left {
+  margin-left: 10px;
+  flex: 20%;
+}
+
+.header-right h2 {
+  font-size: 0.9em;
+}
+
+.bell-icon-container {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-right: 2px solid rgb(135, 135, 135);
+  padding-right: 10px;
+}
+
+.bell-icon {
+  fill: rgb(255, 255, 255);
+}
+
+nav {
+  height: 80px;
+  background-color: rgb(60, 57, 93);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.navbar-svg {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header h2 {
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  flex: 25%;
+  text-align: center;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+.tab {
+  flex: 75%;
+  background-color: #e8e8e8;
+  height: 59px;
+  border-left: 2px solid gainsboro;
+  border-bottom: 2px solid gainsboro;
+}
+
+.traffic-header h3 {
+  margin-top: 15px;
+  margin-left: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.traffic-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

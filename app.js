@@ -1,0 +1,1 @@
+const trafficChart = document.getElementById('traffic-chart');

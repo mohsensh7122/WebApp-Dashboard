@@ -1,0 +1,31 @@
+header {
+    height: 80px;
+    background-color: $color-primary;
+    @include flexy(flex, row, space-between, center);
+    color: $color-white;
+}
+
+
+h1 {
+    font-size: 1.2em;
+}
+
+.header-right, .header-left {
+    @include flexy(flex, row, space-between, center);
+}
+
+.header-right * {
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: right;
+}
+
+.header-left {
+    margin-left: 10px;
+    flex: 20%;
+}
+
+.header-right h2 {
+    font-size: 0.9em;
+}
+

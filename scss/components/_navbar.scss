@@ -1,0 +1,12 @@
+nav {
+    height: 80px;
+    background-color: $color-secondary;
+    @include flexy(flex, row, space-around, center);
+    color: $color-white;
+}
+
+.navbar-svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+}

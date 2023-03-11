@@ -1,0 +1,12 @@
+.bell-icon-container {
+    width: 45px;
+    height: 45px;
+    @include flexy(flex, null, null, center);
+    border-right: 2px solid $medium-grey;
+    padding-right: 10px;
+}
+
+.bell-icon {
+    fill: $color-white;
+    
+}
