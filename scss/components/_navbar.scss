@@ -1,12 +1,32 @@
 nav {
-    height: 80px;
+    padding: 20px 0;
     background-color: $color-secondary;
-    @include flexy(flex, row, space-around, center);
     color: $color-white;
+}
+
+.navigation-items {
+    @include flexy(flex, row, space-around, center);
 }
 
 .navbar-svg {
     width: 30px;
-    height: 30px;
     color: white;
+}
+
+@media (min-width: 768px) {
+    nav {
+        @include flexy(flex, column, center, flex-start);
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    .navigation-items {
+        @include flexy(flex, column, center, space-around);
+        flex-wrap: wrap;
+    }
+
+    .navigation-items a {
+        margin-bottom: 20px;
+    }
+    
 }

@@ -1,0 +1,18 @@
+.alert {
+    margin: 10px;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 20px 15px;
+    border-radius: 10px;
+    width: 90%;
+    font-size: 13px;
+}
+
+.alert-banner {
+    @include flexy(flex, row, space-between, center);
+}
+
+.alert-banner-close {
+    font-size: 20px;
+    font-weight: bold;
+}

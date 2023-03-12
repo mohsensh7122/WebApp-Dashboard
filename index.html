@@ -9,9 +9,9 @@
     <title>WebApp Dashboard</title>
 </head>
 
-<body>
+<body class="grid-container">
 
-    <header>
+    <header class="header">
         <div class="header-left">
             <h1>WebApp&trade;</h1>
         </div>
@@ -31,27 +31,30 @@
 
     </header>
 
-    <nav>
+    <nav  class="navigation">
+        <div class="navigation-items">
 
-        <a href="#home">
-            <img src="svgs/home.svg" alt="" class="navbar-svg">
-        </a>
-
-        <a href="#bar-chart">
-            <img src="svgs/bar-chart.svg" alt="" class="navbar-svg">
-        </a>
-
-        <a href="#members">
-            <img src="svgs/members.svg" alt="" class="navbar-svg">
-        </a>
-
-        <a href="#settings">
-            <img src="svgs/settings.svg" alt="" class="navbar-svg">
-        </a>
+            <a href="#home">
+                <img src="svgs/home.svg" alt="" class="navbar-svg">
+            </a>
+    
+            <a href="#bar-chart">
+                <img src="svgs/bar-chart.svg" alt="" class="navbar-svg">
+            </a>
+    
+            <a href="#members">
+                <img src="svgs/members.svg" alt="" class="navbar-svg">
+            </a>
+    
+            <a href="#settings">
+                <img src="svgs/settings.svg" alt="" class="navbar-svg">
+            </a>
+        </div>
+       
 
     </nav>
 
-    <main>
+    <main class="main">
 
         <section class="main-header">
             <h2 class="headline">Dashboard</h2>
@@ -96,18 +99,18 @@ charts -->
 
         <!-- doughnut chart -->
 
-        <section class="mobile-users">
+        <section class="mobile">
             <h3>Mobile Users</h3>
             <div class="widget-container-half">
                 <!-- element doughnut chart will attach to -->
-                <canvas id="mobile-users-chart"></canvas>
+                <canvas id="mobile-chart"></canvas>
             </div>
         </section>
 
 
         <!-- Social Status Section-->
 
-        <section class="social-status">
+        <section class="social">
 
             <div class="social-container">
                 <div class="social-image">
@@ -191,7 +194,7 @@ charts -->
 
         <!-- Recent Activity -->
 
-        <section class="recent-activity">
+        <section class="activity">
 
             <h3>Recent Activity</h3>
 
@@ -266,6 +269,7 @@ charts -->
         </section>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.umd.js"></script>
     <script src="app.js"></script>
 </body>
 
