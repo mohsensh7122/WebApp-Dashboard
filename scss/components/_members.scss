@@ -1,0 +1,92 @@
+.members, .activity {
+    text-align: center;
+
+    &-main-title {
+        text-align: left;
+        margin: 20px 20px;
+    }
+
+    &-container {
+        
+        padding: 20px 0;
+        height: 200px;
+        text-align: center;
+
+        &:not(:last-of-type){
+            border-bottom-width: 80%;
+        border-bottom: 2px solid darken($light-grey, 10%);
+        }
+        
+        
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+            padding-left: 20px;
+
+            &:not(:last-of-type){
+                border-bottom: 2px solid darken($light-grey, 10%);
+            }
+           
+
+            .activity-container{
+                @include flexy(flex, row, flex-start, center);
+            }
+            
+        }
+    }
+
+    &-image-text {
+        @media screen and (min-width: 768px){
+            @include flexy(flex, row, space-between, center);
+        }
+        
+    }
+
+    &-image {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    &-date {
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    &-text  {
+        margin-left: 10px;
+    }
+}
+
+
+.members {
+
+    @media screen and (min-width: 768px){
+        border-bottom: 2px solid darken($light-grey, 10%);
+    }
+
+    @media screen and (min-width: 1024px) {
+        border-right: 2px solid darken($light-grey, 10%);
+    }
+    
+    &-container {
+        @media screen and (min-width: 768px) {
+            @include flexy(flex, row, space-between, center);
+            
+        }
+    }
+}
+
+.activity {
+
+    @media screen and (min-width: 768px) {
+        border-bottom: 2px solid darken($light-grey, 10%);
+    }
+
+    &-container {
+        @media screen and (min-width: 768px) {
+            @include flexy(flex, row, flex-start, center);
+        }
+    }
+}

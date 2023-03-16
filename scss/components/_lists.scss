@@ -2,12 +2,15 @@
 
 .traffic-header h3 {
     margin-top: 15px;
-    margin-left: 16px;
     margin-bottom: 15px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 .traffic-nav {
-    @include flexy(flex, row, space-around, center);
+    margin: 20px auto;
+    width: 80%;
+    @include flexy(flex, row, space-between, start);
+    max-width: 600px;
+    
 }

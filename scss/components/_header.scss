@@ -29,3 +29,69 @@ h1 {
     font-size: 0.9em;
 }
 
+
+@keyframes shaking {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    40% {
+        transform: rotate(40deg);
+    }
+
+    70% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(40deg);
+    }
+}
+
+
+
+// The Bell Icon
+
+.bell-icon {
+
+    padding: 10px;
+    fill: $color-white;
+    width: 30px;
+    height: 30px;
+
+    transition: animation .5s;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+
+
+
+    &-container {
+        position: relative;
+        width: 45px;
+        height: 45px;
+        @include flexy(flex, null, null, center);
+        border-right: 2px solid $medium-grey;
+        padding-right: 10px;
+
+        &:hover .bell-icon {
+            animation: shaking 1.5s ease-out backwards;
+        }
+       
+    }
+
+
+
+
+    &-notification {
+        background-color: greenyellow;
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+    }
+}
+
+
+

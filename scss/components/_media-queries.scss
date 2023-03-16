@@ -16,6 +16,9 @@
         grid-column: 1 / span 2;
     }
 
+    .activity, .members {
+        grid-column: 1 / span 2;
+    }
     .alert {
         grid-column: 1 / span 2;
     }
@@ -24,12 +27,16 @@
         grid-column: 1 / span 2;
     }
 
-    .daily, .members, .message {
+    .daily {
         grid-column: 1 / span 1;
     }
 
-    .mobile, .activity, .settings {
+    .mobile {
         grid-column: 2 / span 1;
+    }
+
+    .message, .settings {
+        grid-column: 1 / span 2;
     }
 
     .widget-container-full {
@@ -39,5 +46,23 @@
         width: 45vw;
     }
 
-    // Other stylings like padding and margin will need to be added later
+
+    // Other stylings like padding and margin will need
+}
+
+@media (min-width: 1024px){
+  .members {
+        grid-column: 1 / span 1;
+    }
+    .activity {
+        grid-column: 2 / span 1;
+    }
+
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .settings {
+        grid-column: 2 / span 1;
+    }
 }

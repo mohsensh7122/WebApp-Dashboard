@@ -3,6 +3,11 @@ const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
 
+
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const send = document.getElementById("send");
+
 alertBanner.innerHTML = `<div class="alert-banner">
 <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
 to complete</p>
@@ -39,9 +44,11 @@ let trafficData = {
 };
 
 let trafficOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
     backgroundColor: 'rgba(112, 104, 201, .5)',
     fill: true,
-    aspectRatio: 2.5,
+    aspectRatio: 1,
     animation: {
         duration: 0
     },
@@ -74,6 +81,8 @@ const dailyData = {
     }]
 };
 const dailyOptions = {
+    aspectRatio: 1,
+    maintainAspectRatio: false,
     scales: {
         y: {
             beginAtZero: true
@@ -110,7 +119,8 @@ const mobileData = {
 };
 
 const mobileOptions = {
-    aspectRatio: 1.9,
+    maintainAspectRatio: false,
+    aspectRatio: 1,
     plugins: {
         legend: {
             position: 'right',
@@ -126,4 +136,20 @@ let mobileChart = new Chart(mobileCanvas, {
     type: 'doughnut',
     data: mobileData,
     options: mobileOptions
+});
+
+
+// ***** Messaging Section ***** //
+
+send.addEventListener('click', () => {
+    // ensure user and message fields are filled out
+    if (user.value === "" && message.value === "") {
+        alert("Please fill out user and message fields before sending");
+    } else if (user.value === "") {
+        alert("Please fill out user field before sending");
+    } else if (message.value === "") {
+        alert("Please fill out message field before sending");
+    } else {
+        alert(`Message successfully sent to: ${user.value}`);
+    }
 });
