@@ -80,6 +80,17 @@
 
 .activity {
 
+    .arrow {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            color: $medium-grey;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: 10px;
+        }
+    }
+
     @media screen and (min-width: 768px) {
         border-bottom: 2px solid darken($light-grey, 10%);
     }
